@@ -58,10 +58,6 @@ You should now be able to call any executables installed in the environment as i
 crabs -h
 ```
 
-
-`--dereplicate`
-
-
 # Usage notes #
 
 - At present, there are XX different reference databases supported here.
@@ -121,7 +117,7 @@ blastn -db "path/to/BLAST_TAX_COI" -max_target_seqs 500 -outfmt "6 std qlen qcov
 ```
 
 
-![Figure_Example1](figures_readme/crabs_greengenes.png)
+![Figure_Example1](figures_readme/Fish_green_red_test.png)
 
 
 # 🐟 12S reference database for the "MiFish" marker 🐟
