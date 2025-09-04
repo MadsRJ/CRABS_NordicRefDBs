@@ -117,7 +117,7 @@ blastn -db "path/to/BLAST_TAX_COI" -max_target_seqs 500 -outfmt "6 std qlen qcov
 ```
 
 
-![Figure_Example1](figures_readme/Fish_green_red_test.png)
+![Fig1](figures_readme/Fish_green_red_test.png)
 
 
 # 🐟 12S reference database for the "MiFish" marker 🐟
@@ -142,7 +142,9 @@ bash Make_RefDB_MiFish.sh
 
 ## 👏 Acknowledgements 👏
 
-This repository was created under the framework of the EU-project [MARCO-BOLO](https://marcobolo-project.eu/).
+This repository was created under the framework of the EU-project [MARCO-BOLO](https://marcobolo-project.eu/). The MARCO-BOLO project is funded by the European Union under the Horizon Europe Programme, Grant Agreement No. 101082021 (MARCO-BOLO). Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Research Executive Agency (REA). Neither the European Union nor the granting authority can be held responsible for them. UK participants in MARCO-BOLO are supported by the UKRI’s Horizon Europe Guarantee under the Grant No. 10068180 (MS); No. 10063994 (MBA); No. 10048178 (NOC).
+
+![Fig2](figures_readme/MARCO-BOLO_logo_col.png)
 
 ## ✍️ References ✍️
 Geller, J., Meyer, C., Parker, M., & Hawk, H. (2013). Redesign of PCR primers for mitochondrial cytochrome c oxidase subunit I for marine invertebrates and application in all-taxa biotic surveys. Molecular Ecology Resources 13(5), 851-861. https://doi.org/10.1111/1755-0998.12138.
