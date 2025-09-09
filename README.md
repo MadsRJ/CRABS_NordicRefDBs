@@ -128,6 +128,7 @@ blastn -db "path/to/BLAST_TAX_COI" -max_target_seqs 500 -outfmt "6 std qlen qcov
 #### R-primer: Original, Tele02? Others? Elasmo too?
 ##
 
+This should be an example of a deeply curated database for fish! Mads, make sure to include a dereplication step - `--dereplication-method` with `unique_species` works exactly as I had hoped for.
 
 To build this database, run the following script.
 
