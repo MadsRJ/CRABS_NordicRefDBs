@@ -117,9 +117,6 @@ blastn -db "path/to/BLAST_TAX_COI" -max_target_seqs 500 -outfmt "6 std qlen qcov
 ```
 
 
-![Fig1](figures_readme/Fish_green_red_test.png)
-
-
 # 🐟 12S reference database for the "MiFish" marker 🐟
 
 ## Key features
