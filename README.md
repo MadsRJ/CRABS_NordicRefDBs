@@ -129,6 +129,9 @@ This should be an example of a deeply curated database for fish! Mads, make sure
 
 To build this database, run the following script.
 
+- Add extra support for Nordic countries (Denmark, Finland, Iceland, Norway, and Sweden, along with the autonomous territories of the Faroe Islands and Greenland)
+- Add overview Table
+
 ```
 bash Make_RefDB_MiFish.sh
 ```
