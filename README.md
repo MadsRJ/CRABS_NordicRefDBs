@@ -129,12 +129,20 @@ This should be an example of a deeply curated database for fish! Mads, make sure
 
 To build this database, run the following script.
 
-- Add extra support for Nordic countries (Denmark, Finland, Iceland, Norway, and Sweden, along with the autonomous territories of the Faroe Islands and Greenland)
 - Add overview Table
 
 ```
 bash Make_RefDB_MiFish.sh
 ```
+
+
+## Extra support for Nordic countries (Denmark, Finland, Iceland, Norway, and Sweden, along with the autonomous territories of the Faroe Islands and Greenland)
+#### Table overview of Nordic fish species in the reference database as well as species currently missing in the reference database
+
+| Order                  | Family            | Species                       | Common name                 | Present in database  | Unique sequences  | Notes             |
+|------------------------|-------------------|-------------------------------|-----------------------------|----------------------|-------------------|-------------------|
+| Cypriniformes          | Acheilognathidae  | Rhodeus amarus                | European bitterling         |           x          |         x         |     ABC           |
+| Acipenseriformes       | Acipenseridae     | Acipenser baerii              | Siberian sturgeon           |       example               |         test          |        test           |
 
 
 ## 🧩 Contributors 🧩
