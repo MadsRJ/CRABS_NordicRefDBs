@@ -1,8 +1,8 @@
 # This page is currently under development, but the idea is to add the steps taken to generate the various reference databases used by the Research Group for Genetics (RGG) at UiT as I progress.
 
-# 💾🧬 CRABS_RefDBs 🧬💾 #
+# 💾🧬 CRABS_NordicRefDBs 🧬💾 #
 
-Welcome to *CRABS_RefDBs*! This repository serves to illustrate how I've created various reference databases for various metabarcoding markers used in eDNA research at *UiT - The Arctic University of Norway*. 
+Welcome to *CRABS_NordicRefDBs*! This repository serves to illustrate how I've created various reference databases for various metabarcoding markers used in eDNA research at *UiT - The Arctic University of Norway*. 
 All databases are here built with the extremely versatile [CRABS](https://github.com/gjeunen/reference_database_creator) software (Jeunen et al. 2023), which interconnects different reference data repositories and harmonizes them with the taxonomic backbone of NCBI. 
 **Note**: All CRABS credits should be directed [here](https://github.com/gjeunen/reference_database_creator), I'm just a fan of the toolkit they've developed.
 
