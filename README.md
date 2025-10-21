@@ -142,7 +142,7 @@ bash Make_RefDB_MiFish.sh
 | Order                  | Family            | Species                       | Common name                 | Present in database  | Unique sequences  | Notes             |
 |------------------------|-------------------|-------------------------------|-----------------------------|----------------------|-------------------|-------------------|
 | Cypriniformes          | Acheilognathidae  | Rhodeus amarus                | European bitterling         |           x          |         x         |     ABC           |
-| Acipenseriformes       | Acipenseridae     | Acipenser baerii              | Siberian sturgeon           |       example               |         test          |        test           |
+| Acipenseriformes       | Acipenseridae     | Acipenser baerii              | Siberian sturgeon           |       example               |         test          |        🇩🇰           |
 
 
 ## 🧩 Contributors 🧩
