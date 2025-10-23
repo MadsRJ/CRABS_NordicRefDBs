@@ -135,9 +135,8 @@ To build this database, run the following script.
 bash Make_RefDB_MiFish.sh
 ```
 
-
-## Extra support for Nordic countries (Denmark, Finland, Iceland, Norway, and Sweden, along with the autonomous territories of the Faroe Islands and Greenland)
-#### Table overview of Nordic fish species in the reference database as well as species currently missing in the reference database
+## Extra database curation and support for fishes present in Nordic countries (Denmark, Finland, Iceland, Norway incl. the Svalbard archipelago, and Sweden, along with the autonomous territories of the Faroe Islands and Greenland)
+#### Table of all fish species found in the Nordic countries, along with information on whether or not they exist in the reference database, the amount of unique sequences per species, primer mismatches to the UiT-version of the MiFish-primers, as well as a list of countries from which the species have been reported. All names are reported with Eschmeyer's Catalog of Fishes as the taxonomic authority, and synonyms have been added when encounter in GenBank or elsewhere. The list has been made by combining information from FishBase country lists of species occurrences. It has been supplemented with additions to the Danish fish fauna from Jensen et al. (2022), the Greenland fauna from Jensen et al. (2023) and Møller et al. (2010), and the Norwegian/Arctic fauna by Mecklenburg et al. (2018). Additionally, the Norwegian fish fauna has been supplemented with curated records from the Institute of Marine Research bottom trawl surveys (2004-2021, "NOR-BTS_clean.RData"), as incorporated into [FishGlob](https://github.com/fishglob/FishGlob_data/) (Maureaud et al. 2021, Maureaud et al. 2024).
 
 | Order                       | Family               | Species                           | Common name                   | Known synonyms                                            | Present in database | Unique sequences | Mismatch F-primer | Mismatch R-primer | Distribution                      | Notes             |
 |-----------------------------|----------------------|-----------------------------------|-------------------------------|-----------------------------------------------------------|---------------------|------------------|-------------------|-------------------|-----------------------------------|-------------------|
@@ -756,9 +755,21 @@ This repository was created under the framework of the EU-project [MARCO-BOLO](h
 ## ✍️ References ✍️
 Geller, J., Meyer, C., Parker, M., & Hawk, H. (2013). Redesign of PCR primers for mitochondrial cytochrome c oxidase subunit I for marine invertebrates and application in all-taxa biotic surveys. Molecular Ecology Resources 13(5), 851-861. https://doi.org/10.1111/1755-0998.12138.
 
+Jensen, M. R.,  Sigsgaard, E. E., Ávila, M. d. P., Agersnap, S., Brenner-Larsen, W., Sengupta, M. E., Xing, Y., Krag, M. A., Knudsen, S. W., Carl, H., Møller, P. R., Thomsen, P. F. (2022). Short-term temporal variation of coastal marine eDNA. Environmental DNA 4(4), 747-762. https://doi.org/10.1002/edn3.285.
+
+Jensen, M. R., Høgslund, S., Knudsen, S. W., Nielsen, J., Møller, P. R., Rysgaard, S., Thomsen, P. F. (2023). Distinct latitudinal community patterns of Arctic marine vertebrates along the East Greenlandic coast detected by environmental DNA. Diversity and Distributions 29(2), 316-334. https://doi.org/10.1111/ddi.13665.
+
 Jeunen, G.-J., Dowle, E., Edgecombe, J., von Ammon, U., Gemmell, N. J., & Cross, H. (2023). crabs—A software program to generate curated reference databases for metabarcoding sequencing data. Molecular Ecology Resources 23(3), 725-738. https://doi.org/10.1111/1755-0998.13741.
 
 Leray, M., Yang, J. Y., Meyer, C. P., Mills, S. C., Agudelo, N., Ranwez, V., Boehm, J. T., & Machida, R. J. (2013). A new versatile primer set targeting a short fragment of the mitochondrial COI region for metabarcoding metazoan diversity: application for characterizing coral reef fish gut contents. Frontiers in Zoology 10, 34. https://doi.org/10.1186/1742-9994-10-34.
+
+Maureaud, A. A., Frelat, R., Pécuchet, L., Shackell, N., Mérigot, B., Pinsky, M. L., Amador, K., Anderson, S. C., Arkhipkin, A., Auber, A., Barri, I., Bell, R. J., Belmaker, J., Beukhof, E., Camara, M. L., Guevara-Carrasco, R., Choi, J., Christensen, H. T., Conner, J., Cubillos, L. A., Diadhiou, H. D., Edelist, D., Emblemsvåg, M., Ernst, B., Fairweather, T. P., Fock, H. O., Friedland, K. D., Garcia, C. B., Gascuel, D., Gislason, H., Goren, M., Guitton, J., Jouffre, D., Hattab, T., Hidalgo, M., Kathena, J. N., Knuckey, I., Kidé, S. O., Koen-Alonso, M., Koopman, M., Kulik, V., León, J. P., Levitt-Barmats, Y., Lindegren, M., Llope, M., Massiot-Granier, F., Masski, H., McLean, M., Meissa, B., Mérillet, L., Mihneva, V., Nunoo, F. K. E., O'Driscoll, R., O'Leary, C. A., Petrova, E., Ramos, J. E., Refes, W., Román-Marcote, E., Siegstad, H., Sobrino, I., Sólmundsson, J., Sonin, O., Spies, I., Steingrund, P., Stephenson, F., Stern, N., Tserkova, F., Tserpes, G., Tzanatos, E., van Rijn, I., van Zwieten, P. A. M., Vasilakopoulos, P., Yepsen, D. V., Ziegler, P., Thorson, J. T. (2021). Are we ready to track climate-driven shifts in marine species across international boundaries? - A global survey of scientific bottom trawl data. Global Change Biology 27(2), 220-236. https://doi.org/10.1111/gcb.15404.
+
+Maureaud, A. A., Palacios-Abrantes, J., Kitchel, Z., Mannocci, L., Pinsky, M. L., Fredston, A., Beukhof, E., Forrest, D. L., Frelat, R., Palomares, M. L. D., Pecuchet, L., Thorson, J. T., van Denderen, P. D., Mérigot, B. (2024). FISHGLOB_data: an integrated dataset of fish biodiversity sampled with scientific bottom-trawl surveys. Scientific Data 11, 24. https://doi.org/10.1038/s41597-023-02866-w.
+
+Mecklenburg, C., Lynghammar, A., Johannesen, E., Byrkjedal, I., Christiansen, J. S., Karamishko, O. V., Mecklenburg, T. A., Møller, P. R., Steinke, D., Wienerroither, R. M. (2018). Marine Fishes of the Arctic Region. Conservation of Arctic Flora and Fauna, Akureyri, Iceland. ISBN: ISBN 978-9935-431-69-1.
+
+Møller, P. R., Nielsen, J. G., Knudsen, S. W., Poulsen, J. Y., Sünksen, K., Jørgensen, O. A. (2010). A checklist of the fish fauna of Greenland waters. Zootaxa 2378(1), 1–84.
 
 Wangensteen, O. S., Palacín, C., Guardiola, M., & Turon, X. (2018). DNA metabarcoding of littoral hard-bottom communities: high diversity and database gaps revealed by two molecular markers. PeerJ 6, e4705. https://doi.org/10.7717/peerj.4705.
 
