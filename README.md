@@ -751,7 +751,7 @@ This repository was created under the framework of the EU-project [MARCO-BOLO](h
 ![Fig2](figures_readme/MARCO-BOLO_logo_col.png)
 
 ## ✍️ References ✍️
-Fricke, R., Eschmeyer, W. N., van der Laan, R. (eds) 2025. Eschmeyer's catalog of fishes: genera, species, references. http://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp. Electronic version accessed 25-10-2025.
+Fricke, R., Eschmeyer, W. N., van der Laan, R. (eds) 2025. Eschmeyer's catalog of fishes: genera, species, references. http://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp. Electronic version accessed 10-10-2025.
 
 Geller, J., Meyer, C., Parker, M., & Hawk, H. (2013). Redesign of PCR primers for mitochondrial cytochrome c oxidase subunit I for marine invertebrates and application in all-taxa biotic surveys. Molecular Ecology Resources 13(5), 851-861. https://doi.org/10.1111/1755-0998.12138.
 
