@@ -85,13 +85,16 @@ crabs -h
 
 **F-primer**: Either mlCOIintF 5′-GGWACWGGWTGAACWGTWTAYCCYCC-3′ (Leray et al., 2013) or mlCOIintF-XT 5′-GGWACWRGWTGRACWITITAYCCYCC-3′ (Wangensteen et al., 2018)
 
-**R-primer**: TAIACYTCIGGRTGICCRAARAAYCA (Geller et al., 2013))
+**R-primer**: Either HCO2198 5′-TAAACTTCAGGGTGACCAAAAAATCA-3′ (Folmer et al., 1994) or jgHCO2198 5′-TAIACYTCIGGRTGICCRAARAAYCA-3′ (Geller et al., 2013)
 
 **Species-level resolution for the majority of metazoans based on current knowledge**
 
 **Known issues with co-amplification of prokaryotes from environmental samples**
 
-Can also serve as reference database for primers amplifying shorter fragments contained within the same 313 bp region ... **(find examples Mads!)**
+Can also serve as reference database for primers amplifying shorter fragments contained within the same 313 bp region ... **(find examples Mads!)** 
+
+1) BF1 5′-ACWGGWTGRACWGTNTAYCC-3′ + BR1 5′-ARYATDGTRATDGCHCCDGC-3′ (3 bp more on the F-primer end, Elbrecht & Leese, 2017)
+2) BF1 5′-ACWGGWTGRACWGTNTAYCC-3′ + BR2 5′-TCDGGRTGNCCRAARAAYCA-3′ (3 bp more on the F-primer end, Elbrecht & Leese, 2017)
 
 ##
 
@@ -751,6 +754,10 @@ This repository was created under the framework of the EU-project [MARCO-BOLO](h
 ![Fig2](figures_readme/MARCO-BOLO_logo_col.png)
 
 ## ✍️ References ✍️
+Elbrecht, V. & Leese, F. (2017). Validation and development of COI metabarcoding primers for freshwater macroinvertebrate bioassessment. Frontiers in Environmental Science 5, 11. https://doi.org/10.3389/fenvs.2017.00011.
+
+Folmer, O., Black, M., Hoeh, W., Lutz, R., Vrijenhoek, R. (1994). DNA primers for amplification of mitochondrial cytochrome c oxidase subunit I from diverse metazoan invertebrates. Molecular Marine Biology and Biotechnology 3(5), 294-299.
+
 Fricke, R., Eschmeyer, W. N., van der Laan, R. (eds) 2025. Eschmeyer's catalog of fishes: genera, species, references. http://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp. Electronic version accessed 10-10-2025.
 
 Geller, J., Meyer, C., Parker, M., & Hawk, H. (2013). Redesign of PCR primers for mitochondrial cytochrome c oxidase subunit I for marine invertebrates and application in all-taxa biotic surveys. Molecular Ecology Resources 13(5), 851-861. https://doi.org/10.1111/1755-0998.12138.
