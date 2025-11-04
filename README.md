@@ -123,8 +123,9 @@ blastn -db "path/to/BLAST_TAX_COI" -max_target_seqs 500 -outfmt "6 std qlen qcov
 # 🐟 12S reference database for the "MiFish" marker 🐟
 
 ## Key features
-#### Targeting ~170 bp of the mitochondrially encoded 12S ribosomal RNA (12S rRNA) gene
-#### F-primer: UiT version, original, Tele02? Others? Elasmo too?
+#### Targeting ~167-182 bp of the mitochondrially encoded 12S ribosomal RNA (12S rRNA) gene
+#### F-primer: Either MiFish-U-F (UiT mod.) 5′-GCCGGTAAAACTCGTGCCAGC-3′ (Sales et al., 2019), MiFish-U-F 5′-GTCGGTAAAACTCGTGCCAGC-3′ (Miya et al., 2015), Tele02-F 5′-AAACTCGTGCCAGCCACC-3′ (Taberlet et al., 2018, Thomsen et al., 2016), or MiFish-E-F 5′-GTTGGTAAATCTCGTGCCAGC-3′ (Miya et al., 2015)
+
 #### R-primer: Original, Tele02? Others? Elasmo too?
 ##
 
@@ -776,7 +777,15 @@ Maureaud, A. A., Palacios-Abrantes, J., Kitchel, Z., Mannocci, L., Pinsky, M. L.
 
 Mecklenburg, C., Lynghammar, A., Johannesen, E., Byrkjedal, I., Christiansen, J. S., Karamishko, O. V., Mecklenburg, T. A., Møller, P. R., Steinke, D., Wienerroither, R. M. (2018). Marine Fishes of the Arctic Region. Conservation of Arctic Flora and Fauna, Akureyri, Iceland. ISBN: ISBN 978-9935-431-69-1.
 
+Miya, M., Sato, Y., Fukunaga, T., Sado, T., Poulsen, J. Y., Sato, K., Minamoto, T., Yamamoto, S., Yamanaka, H., Araki, H., Kondoh, M., & Iwasaki, W. (2015). MiFish, a set of universal PCR primers for metabarcoding environmental DNA from fishes: Detection of more than 230 subtropical marine species. Royal Society Open Science, 2(7), 150088. https://doi.org/10.1098/rsos.150088.
+
 Møller, P. R., Nielsen, J. G., Knudsen, S. W., Poulsen, J. Y., Sünksen, K., Jørgensen, O. A. (2010). A checklist of the fish fauna of Greenland waters. Zootaxa 2378(1), 1–84.
+
+Sales, N. G., Wangensteen, O. S., Carvalho, D. C., Mariani, S. (2019). Influence of preservation methods, sample medium and sampling time on eDNA recovery in a neotropical river. Environmental DNA 1(2), 119–130. https://doi.org/10.1002/edn3.14.
+
+Taberlet, P., Bonin, A., Zinger, L., & Coissac, E. (2018). Environmental DNA: For biodiversity research and monitoring. Oxford University Press.
+
+Thomsen, P. F., Møller, P. R., Sigsgaard, E. E., Knudsen, S. W., Jørgensen, O. A., & Willerslev, E. (2016). Environmental DNA from seawater samples correlate with trawl catches of subarctic, deepwater fishes. PLoS One, 11(11), e0165252. https://doi.org/10.1371/journal.pone.0165252.
 
 Wangensteen, O. S., Palacín, C., Guardiola, M., & Turon, X. (2018). DNA metabarcoding of littoral hard-bottom communities: high diversity and database gaps revealed by two molecular markers. PeerJ 6, e4705. https://doi.org/10.7717/peerj.4705.
 
