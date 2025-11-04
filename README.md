@@ -124,9 +124,19 @@ blastn -db "path/to/BLAST_TAX_COI" -max_target_seqs 500 -outfmt "6 std qlen qcov
 
 ## Key features
 #### Targeting ~167-182 bp of the mitochondrially encoded 12S ribosomal RNA (12S rRNA) gene
-#### F-primer: Either MiFish-U-F (UiT mod.) 5′-GCCGGTAAAACTCGTGCCAGC-3′ (Sales et al., 2019), MiFish-U-F 5′-GTCGGTAAAACTCGTGCCAGC-3′ (Miya et al., 2015), Tele02-F 5′-AAACTCGTGCCAGCCACC-3′ (Taberlet et al., 2018, Thomsen et al., 2016), or MiFish-E-F 5′-GTTGGTAAATCTCGTGCCAGC-3′ (Miya et al., 2015)
+#### F-primer: Either of the below listings.
+1) MiFish-U-F (UiT mod.) 5′-GCCGGTAAAACTCGTGCCAGC-3′ (Sales et al., 2019)
+2) MiFish-U-F 5′-GTCGGTAAAACTCGTGCCAGC-3′ (Miya et al., 2015)
+3) Tele02-F 5′-AAACTCGTGCCAGCCACC-3′ (Taberlet et al., 2018, Thomsen et al., 2016)
+4) MiFish-E-F 5′-GTTGGTAAATCTCGTGCCAGC-3′ (Miya et al., 2015)
+5) Others?
 
-#### R-primer: Original, Tele02? Others? Elasmo too?
+#### R-primer: Either of the below listings.
+1) Original,
+2) Tele02?
+3) Elasmo too?
+4) Others?
+
 ##
 
 This should be an example of a deeply curated database for fish! Mads, make sure to include a dereplication step - `--dereplication-method` with `unique_species` works exactly as I had hoped for.
