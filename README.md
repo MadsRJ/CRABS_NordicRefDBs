@@ -26,7 +26,7 @@ Even if you're just trying to address the 🐘 elephant in the room 🐘, there'
 Many people rightly advocate not to blindly trust the data found in online reference data repositories (e.g. NCBI, BOLD). However, if the alternative is that each and every one of us will have to create references from organisms that we ourselves have identified from the respective environments that we work in, then the whole purpose behind the public repositories is lost. 
 In this GitHub repo, focus is instead on collectively identifying and "blacklisting" those accession numbers that are clearly misidentified, and removing these entries as part of creating the reference database. As with fundamental legal principles, **innocent until proven guilty**, right? I suppose you could view this in legal terms as "all reference barcodes have a right to a fair trial".
 I here provide a preliminary blacklist of all accession numbers that I do not trust the taxonomic identification of, but feel free to either add to this list locally, or to leave a comment on accession numbers that shouldn't be trusted. If you provide some contextual support for not trusting an accession number in your comment, I'd be happy to update the blacklist to include your suggested entries. 
-Also note that each separate reference database created will work with the same
+Also note that each separate reference database created will utilize the same blacklist file as input. It will be subset as part of the script to use only relevant blacklisted accessions, depending on which repository the reference data is retrieved from and what marker is used.
 
 # Requirements/Prerequisites #
 All of the databases can be built upon activating a conda environment based on the yml-file provided in this repo. Follow the below steps to create the environment.
@@ -60,23 +60,18 @@ crabs -h
 
 # Usage notes #
 
-- At present, there are XX different reference databases supported here.
-- Bash wrapper around the standard CRABS-commands
-- These scripts essentially follow the crabs GitHub recommendations most of the way, but do not follow their recommendations completely.
-- Downloading the bold database with matching dipteran families etc.
-- Icky things in the code
--   Careful when adding to blacklist.txt, ensure it will work
--   Careful when using the taxonlist provided, it currently shrinks in size as your download progresses. The file depletes itself. (The file gets deconstructed as you succesfully download. This also updates the counts of taxa required for download and missing to be downloaded)
--   Careful with ...
--   Did not test what happens if you want to remove the last sequence of a fasta file (either bold or ncbi download) - code likely breaks
--   Bug fix to remove "ERROR | Error running makeblastdb BLAST Database creation error: Error: Duplicate seq_ids are found: GB|EU148067, aborting analysis..."
--   Ensure to update your email in the script (for NCBI)
+- At present, there are two different reference databases supported here. One for COI (broad eukaryote) and one for 12S (vertebrates).
+- Both of these scripts are bash wrappers around the standard CRABS-commands with additional filtering steps and modifications. These scripts essentially follow the crabs GitHub recommendations most of the way, but do not follow their recommendations completely.
 
+# Known bugs & icky things in the code #
 
-
-
-
-
+- When downloading the bold database, the download commands have been split into lower-level taxa for allowing download to complete (maximum 1 million sequences can be downloaded in a single command). with matching dipteran families etc. Careful when using the taxonlist provided, it currently shrinks in size as your download progresses. The file depletes itself. (The file gets deconstructed as you succesfully download. This also updates the counts of taxa required for download and missing to be downloaded)
+- The blacklist filtering step currently takes a long time to run for the 12S reference database - consider relying on the premade version of the database or brace yourself with an overnight run of the code.
+- The database is generated with a datestamp of the folder - pay attention to this if updating the reference database overnight.
+- I did not test what happens if you want to blacklist the last sequence of the fasta file (either bold or ncbi download) - code likely breaks.
+- For the COI database, there was a bug "ERROR | Error running makeblastdb BLAST Database creation error: Error: Duplicate seq_ids are found: GB|EU148067, aborting analysis...". I can't seem to find out why this duplicate arises, but I just deleted it as part of the script. 
+- Ensure to update your email in the script (for NCBI)
+- As a note to myself, I should probably look into including representative bacterial sequences in this reference database, as co-amplification of prokaryotes is likely to occur when amplifying this genetic region.
 
 # COI reference database for the "Leray" or "Leray-XT" marker
 
@@ -91,22 +86,20 @@ crabs -h
 
 **Known issues with co-amplification of prokaryotes from environmental samples**
 
-Can also serve as reference database for primers amplifying shorter fragments contained within the same 313 bp region ... **(find examples Mads!)** 
+Can also serve as reference database for primers amplifying shorter fragments contained within the same 313 bp region, such as:
 
-1) BF1 5′-ACWGGWTGRACWGTNTAYCC-3′ + BR1 5′-ARYATDGTRATDGCHCCDGC-3′ (3 bp more on the F-primer end, Elbrecht & Leese, 2017)
-2) BF1 5′-ACWGGWTGRACWGTNTAYCC-3′ + BR2 5′-TCDGGRTGNCCRAARAAYCA-3′ (3 bp more on the F-primer end, Elbrecht & Leese, 2017)
+1) BF1 5′-ACWGGWTGRACWGTNTAYCC-3′ + BR1 5′-ARYATDGTRATDGCHCCDGC-3′ (but do note three bp more on the F-primer end, Elbrecht & Leese, 2017)
+2) BF1 5′-ACWGGWTGRACWGTNTAYCC-3′ + BR2 5′-TCDGGRTGNCCRAARAAYCA-3′ (but do note three bp more on the F-primer end, Elbrecht & Leese, 2017)
 
 ##
 
 This is the database for those of you who want **one (COI) database to rule them all** for all of your metabarcoding projects - especially those focusing on environmental DNA samples (in contrast to bulk samples where e.g. sorting of specimens would maybe rule out the need for certain taxa in your reference database).
-On my setup, it takes ~12-14 hours from start of download to  ...
+On my setup, it takes ~12-14 hours from start of download to database completion.
 To create this monstrosity of a reference database, you obviously need patience. At the time of writing, it downloads >14 million sequences from [BOLD](https://boldsystems.org/) and >1.2 million sequences from [NCBIs nt database](https://www.ncbi.nlm.nih.gov/nuccore/?term=). 
 Generating this database is unfortunately not as smooth-sailing as one could hope for, and this is largely due to heavy traffic on the BOLD servers.
 
 Do note that creation of this reference database does not include any dereplication (as suggested by the CRABS software developers). I mainly use the [MetaBarFlow](https://github.com/evaegelyng/MetaBarFlow/tree/master) pipeline for analyzing metabarcoding data, and the downstream taxonomic identification script takes into account the amount of hits to each taxon for a given query sequence. 
 This would clearly not be possible if the input file for creating the reference database has been dereplicated.
-
-As a note to myself, I should probably look into including representative bacterial sequences in this reference database, as co-amplification of prokaryotes is likely to occur when amplifying this genetic region.
 
 To build this database, make sure your environment is activated and run the following script.
 
@@ -127,23 +120,21 @@ blastn -db "path/to/BLAST_TAX_COI" -max_target_seqs 500 -outfmt "6 std qlen qcov
 #### F-primer: Either of the below listings.
 1) MiFish-U-F (UiT mod.) 5′-GCCGGTAAAACTCGTGCCAGC-3′ (Sales et al., 2019)
 2) MiFish-U-F 5′-GTCGGTAAAACTCGTGCCAGC-3′ (Miya et al., 2015)
-3) Tele02-F 5′-AAACTCGTGCCAGCCACC-3′ (Taberlet et al., 2018, Thomsen et al., 2016)
-4) MiFish-E-F 5′-GTTGGTAAATCTCGTGCCAGC-3′ (Miya et al., 2015)
-5) Others?
+3) MiFish-E-F 5′-GTTGGTAAATCTCGTGCCAGC-3′ (Miya et al., 2015)
+4) Tele02-F 5′-AAACTCGTGCCAGCCACC-3′ (Taberlet et al., 2018, Thomsen et al., 2016)
+5) Elas02-F 5′-GTTGGTHAATCTCGTGCCAGC-3′ (Taberlet et al., 2018)
 
 #### R-primer: Either of the below listings.
-1) Original,
-2) Tele02?
-3) Elasmo too?
-4) Others?
+1) MiFish-U-R 5′-CATAGTGGGGTATCTAATCCCAGTTTG-3′ (Miya et al., 2015)
+2) MiFish-E-R 5′-CATAGTGGGGTATCTAATCCTAGTTTG-3′ (Miya et al., 2015)
+3) Tele02-R 5′-GTTTGACCCTAATCTATGGG-3′ (Taberlet et al., 2018)
+4) Elas02-R 5′-CATAGTAGGGTATCTAATCCTAGTTTG-3′ (Taberlet et al., 2018)
 
 ##
 
 This should be an example of a deeply curated database for fish! Mads, make sure to include a dereplication step - `--dereplication-method` with `unique_species` works exactly as I had hoped for.
 
 To build this database, run the following script.
-
-- Add overview Table
 
 ```
 bash Make_RefDB_MiFish.sh
