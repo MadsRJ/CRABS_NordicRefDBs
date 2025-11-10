@@ -127,7 +127,7 @@ blastn -db "path/to/BLAST_TAX_COI" -max_target_seqs 500 -outfmt "6 std qlen qcov
 #### R-primer: Either of the below listings.
 1) MiFish-U-R 5′-CATAGTGGGGTATCTAATCCCAGTTTG-3′ (Miya et al., 2015)
 2) MiFish-E-R 5′-CATAGTGGGGTATCTAATCCTAGTTTG-3′ (Miya et al., 2015)
-3) Tele02-R 5′-GTTTGACCCTAATCTATGGG-3′ (Taberlet et al., 2018)
+3) Tele02-R 5′-GGGTATCTAATCCCAGTTTG-3′ (Taberlet et al., 2018)
 4) Elas02-R 5′-CATAGTAGGGTATCTAATCCTAGTTTG-3′ (Taberlet et al., 2018)
 
 ##
