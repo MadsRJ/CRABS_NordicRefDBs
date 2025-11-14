@@ -133,6 +133,8 @@ blastn -db "path/to/BLAST_TAX_COI" -max_target_seqs 500 -outfmt "6 std qlen qcov
 ##
 
 This should be an example of a deeply curated database for fish! Mads, make sure to include a dereplication step - `--dereplication-method` with `unique_species` works exactly as I had hoped for.
+Notes to self:
+- I generally allow 1 ambiguous basepair, just not for selected species occurring in Nordic countries.
 
 To build this database, run the following script.
 
